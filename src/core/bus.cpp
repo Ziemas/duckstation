@@ -726,7 +726,7 @@ template<MemoryAccessType type, MemoryAccessSize size>
 ALWAYS_INLINE static TickCount DoRAMAccess(u32 offset, u32& value)
 {
   // TODO: Configurable mirroring.
-  offset &= UINT32_C(0x1FFFFF);
+  offset &= UINT32_C(0x3FFFFF);
   if constexpr (type == MemoryAccessType::Read)
   {
     if constexpr (size == MemoryAccessSize::Byte)
