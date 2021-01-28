@@ -793,6 +793,7 @@ ALWAYS_INLINE static TickCount DoBIOSAccess(u32 offset, u32& value)
   else
   {
     // Writes are ignored.
+    return 0;
   }
 
   return m_bios_access_time[static_cast<u32>(size)];
